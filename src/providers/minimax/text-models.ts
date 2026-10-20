@@ -1,1 +1,1 @@
-export const minimaxTextModels = ["MiniMax-M3.1-Flash", "MiniMax-M3"];
+export const minimaxTextModels: string[] = ["MiniMax-M3.1-Flash", "MiniMax-M3"];
