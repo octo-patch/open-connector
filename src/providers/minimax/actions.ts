@@ -727,7 +727,8 @@ export const minimaxActions: ActionDefinition[] = [
     inputSchema: s.object(
       "Options for listing MiniMax models. Non-text models are preserved.",
       {
-        include_legacy: s.boolean("Return the complete upstream model list, including legacy text models.", {
+        include_legacy: s.boolean({
+          description: "Return the complete upstream model list, including legacy text models.",
           default: false,
         }),
       },

@@ -16,10 +16,11 @@ const openrouterHeaderInputFields: Record<string, JsonSchema> = {
   xTitle: s.string("The application display name sent in the X-Title header for OpenRouter console display."),
 };
 const openrouterHeaderOptionalFields = ["httpReferer", "xTitle"];
-const includeLegacyMinimaxSchema = s.boolean(
-  "Include legacy MiniMax text models. Otherwise prefer MiniMax-M3.1-Flash then MiniMax-M3; other models and RSS are unchanged.",
-  { default: false },
-);
+const includeLegacyMinimaxSchema = s.boolean({
+  description:
+    "Include legacy MiniMax text models. Otherwise prefer MiniMax-M3.1-Flash then MiniMax-M3; other models and RSS are unchanged.",
+  default: false,
+});
 
 const chatCompletionInputSchema = s.object(
   "Input parameters when creating an OpenRouter chat completion.",
