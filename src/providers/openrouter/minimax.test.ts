@@ -17,6 +17,7 @@ afterEach(() => vi.unstubAllGlobals());
 const ids = [
   "other/model",
   "minimax/minimax-m2.7",
+  "minimax/minimax-01",
   "minimax/minimax-m3",
   "other/second",
   "minimax/minimax-m3.1-flash:free",

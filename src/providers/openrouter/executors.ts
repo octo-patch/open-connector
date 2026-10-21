@@ -181,7 +181,7 @@ function currentMinimaxModels(payload: unknown): unknown {
   const current = ["minimax/minimax-m3.1-flash:free", "minimax/minimax-m3"];
   const isMinimaxText = (item: unknown): boolean => {
     const id = optionalString(optionalRecord(item)?.id) ?? "";
-    return /^minimax\/(?:minimax-(?:m\d|text-)|m2-her$|abab\d)/i.test(id);
+    return /^minimax\/(?:minimax-(?:m\d|text-|01$)|m2-her$|abab\d)/i.test(id);
   };
   const preferred = current.flatMap((id) => models.filter((item) => optionalRecord(item)?.id === id));
   let inserted = false;
